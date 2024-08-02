@@ -200,9 +200,10 @@ function Navbar() {
             open && "border-white"
           }`}
           href="#"
-          onClick={(e) => {
+          onMouseOverCapture={(e) => {
             setOpen(!open);
           }}
+          
         >
           {props.title}{" "}
           <svg
