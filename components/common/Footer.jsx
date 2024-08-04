@@ -1,26 +1,37 @@
-import { FiFacebook, FiTwitter, FiYoutube } from 'react-icons/fi';
+import { FiFacebook, FiYoutube } from 'react-icons/fi';
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <footer className="flex flex-col items-center justify-center w-full border-t">
-            <div className="w-5/6 my-4 items-center lg:grid grid-cols-2">
-                <div className="text-center text-sm text-gray-500 lg:text-left">Copyright © 2021 10 Bed ICU - All Rights Reserved.</div>
-                <div className="flex justify-center space-x-4 pt-2 lg:justify-start lg:pt-0">
-                    <div><a href="https://www.facebook.com/10bedICU/"><FiFacebook size={"1.5em"}/></a></div>
-                    <div><a href="https://twitter.com/10BedICU"><FiTwitter size={"1.5em"}/></a></div>
-                    <div><a href="https://www.youtube.com/channel/UCJwsY5kpy2cWDGEL05fWMeA"><FiYoutube size={"1.5em"}/></a></div>
+        <footer className="w-full border-t border-gray-300 bg-gray-100 py-4">
+            <div className="w-5/6 mx-auto flex flex-col items-center">
+                {/* Container for Copyright */}
+                <div className="w-full flex justify-center lg:justify-start mb-4">
+                    <p className="text-sm text-gray-500">Copyright © 2021 10 Bed ICU - All Rights Reserved.</p>
                 </div>
-            </div>
+                {/* Container for Social Icons and Navigation Links */}
+                <div className="text-center mb-4">
+                    <div className="flex justify-center space-x-4 mb-2">
+                        <a href="https://www.facebook.com/10bedICU/" aria-label="Facebook">
+                            <FiFacebook size={"1.5em"} className="text-gray-600 hover:text-blue-600" />
+                        </a>
+                        <a href="https://x.com/10BedICU" aria-label="X">
+                            <FaXTwitter size={"1.5em"} className="text-gray-600 hover:text-blue-400" />
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCJwsY5kpy2cWDGEL05fWMeA" aria-label="YouTube">
+                            <FiYoutube size={"1.5em"} className="text-gray-600 hover:text-red-600" />
+                        </a>
+                    </div>
 
-            <div className="my-2 mb-6 lg:mt-2">
-                <ul className="flex justify-center space-x-4 text-gray-600">
-                    <li className="hover:text-blue-500"><a href="https://10bedicu.org/">Home</a></li>
-                    <li className="hover:text-blue-500"><a href="https://10bedicu.org/tech-platform">Tech Platform</a></li>
-                    <li className="hover:text-blue-500"><a href="https://10bedicu.org/media">Media</a></li>
-                    <li className="hover:text-blue-500"><a href="https://10bedicu.org/donate-now">Donate Now</a></li>
-                    <li className="hover:text-blue-500"><a href="https://10bedicu.org/deployment">Deployment</a></li>
-                    <li className="hover:text-blue-500"><a href="https://10bedicu.org/our-team">Our Team</a></li>    
-                </ul>
+                    <ul className="flex flex-wrap justify-center space-x-4 text-gray-600">
+                        <li className="hover:text-blue-500"><a href="https://10bedicu.org/">Home</a></li>
+                        <li className="hover:text-blue-500"><a href="https://10bedicu.org/tech-platform">Tech Platform</a></li>
+                        <li className="hover:text-blue-500"><a href="https://10bedicu.org/media">Media</a></li>
+                        <li className="hover:text-blue-500"><a href="https://10bedicu.org/donate-now">Donate Now</a></li>
+                        <li className="hover:text-blue-500"><a href="https://10bedicu.org/deployment">Deployment</a></li>
+                        <li className="hover:text-blue-500"><a href="https://10bedicu.org/our-team">Our Team</a></li>
+                    </ul>
+                </div>
             </div>
         </footer>
     );
